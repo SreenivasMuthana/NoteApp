@@ -1,0 +1,29 @@
+<section class="note">
+    <article>
+        <h2>UPDATE NOTE</h2>
+        <form action="/note/edit/{{editPayload._id}}?_method=PUT" method="post">
+        <input type="hidden" name="_method" value="PUT">
+        <div class="f8orm-group">
+             <label for="title">Note Title</label>
+             <input type="text" name="title" id="title" required placeholder="Enter title" value="{{editPayload.title}}">
+        </div>
+
+        <div class="form-group">
+            <label for="category">Note Category</label>
+            <select name="category" id="category">
+                <option value="frontend">Frontend</option>
+                <option value="backend">Backend</option>
+                <option value="machine_learning">Machine Learning</option>
+                <option value="database">database</option>
+                <option value="cloud">cloud</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="description" ><textarea placeholder="Enter data to Update" name="description" id="description" cols="30" rows="10" ></textarea></label>
+        </div>
+        <div class="form-group">
+            <button> Click to Update note</button>
+        </div>
+        </form>
+    </article>
+</section>

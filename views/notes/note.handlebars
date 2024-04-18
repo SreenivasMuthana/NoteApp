@@ -1,0 +1,14 @@
+{{!-- To see single note --}}
+<section class="cardInner">
+    <article>
+        {{#if payload}}
+        <div class="card">
+            <h2>{{payload.title}}t</h2>
+            <p>{{payload.category}}</p>
+            <p class="desc">{{payload.description}}</p>
+        </div>
+        {{else}}
+        <h1>no note available</h1>
+        {{/if}}
+    </article>
+</section>
